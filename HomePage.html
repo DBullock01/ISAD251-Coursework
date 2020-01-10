@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Home Page </title>
+		
+	</head>
+	
+	<body>
+		<div style="background-color:cyan; width:700px; height:400px; border-bottom:2px solid black; border-left:2px solid black;border-right:2px solid black;position: relative; margin:auto;">
+		
+			<div style="background-color:blue; margin:auto; width:700px; height:30px; border-top:2px solid black;border-bottom:2px solid black; position:absolute">
+				<div style="background-color:blue; width:70px; height:100%; border-right:2px solid black; float:left">
+					<p id="CornerTag" style="margin:auto; color:black;"></p>
+				</div>
+				
+				<table id="AdminLoginTable" style="float:left;display:none">
+					<tr>
+						<th>Username:</th>
+						<td><input type="text" id="AdminUsernameInput" style="width:100px"/></td>
+						<th>Password:</th>
+						<td><input type="text" id="AdminPasswordInput" style="width:100px"/></td>
+					</tr>
+				</table>
+				<input type="button" id="AdminLoginButton" value="Admin Login" onclick="AdminLoginButtonOnClick()" style="float:right; height:27px;">
+			</div>
+				
+			<div style="background-color:cyan; width:350px; height:100px; margin:auto; border:1px solid black; position:relative; top:100px">
+				
+				<form style="margin:auto"><!--action="/action_page.php">-->
+					<table style="margin:auto">
+						<tr>
+							<th> Name: </th>
+							<td><input type="text" id="NameInput"></td>
+						</tr>
+						<tr>
+							<th> Table Number: </th>
+							<td><input type="text" id="TableNumberInput"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="button" id="SubmitName&TableNoButton" style="height:25px;" value="Reserve Table & Continue Order"></td><!--type="submit"-->
+						</tr>
+					</table>
+				</form>
+				
+			</div>
+		</div>
+	</body>
+</html>
+
+<script language="javascript">
+
+	function AdminLoginButtonOnClick(){
+		AdminLoginButton.value = "Submit";
+		CornerTag.innerHTML = "Admin";
+		AdminLoginTable.style.display = "block";
+	}
+</script>
